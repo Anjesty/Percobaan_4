@@ -9,7 +9,12 @@
         android:id="@+id/navigation_home"
         android:name="com.example.percobaan4.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <!-- Tambahkan action untuk navigasi dari Home ke Medical History -->
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_medical_history"
+            app:destination="@id/navigation_medical_history" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
@@ -22,4 +27,11 @@
         android:name="com.example.percobaan4.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+    <!-- Tambahkan Medical History Fragment -->
+    <fragment
+        android:id="@+id/navigation_medical_history"
+        android:name="com.example.percobaan4.ui.medical.MedicalHistoryFragment"
+        android:label="@string/title_medical_history"
+        tools:layout="@layout/fragment_medical_history" />
 </navigation>
